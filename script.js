@@ -27,8 +27,8 @@ const init = function () {
   score0El.textContent = 0;
   score1El.textContent = 0;
 
-  // diceEl.forEach(el => el.classList.add('hidden'));
-  // messageEl.forEach(el => el.classList.add('hidden'));
+  diceEl.forEach(el => el.classList.add('hidden'));
+  messageEl.forEach(el => el.classList.add('hidden'));
   player0El.classList.remove('player-winner');
   player1El.classList.remove('player-winner');
   player0El.classList.add('player-active');

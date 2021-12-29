@@ -258,7 +258,7 @@ main {
   }
 
   .btn:active {
-    transform: translateY(-1rem);
+    transform: translate(-50%, -0.8rem);
   }
 
   .dice {
