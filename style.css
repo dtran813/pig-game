@@ -52,7 +52,7 @@ main {
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin-bottom: auto;
 }
 
 .score {
@@ -63,10 +63,10 @@ main {
 }
 
 .message {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #9b0000;
   letter-spacing: 3px;
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 .player-active {
@@ -128,11 +128,14 @@ main {
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: inline-block;
-  margin-right: 0.7rem;
+  margin-right: 0.5rem;
 }
 
+.short-text {
+  display: none;
+}
 .btn-new {
   top: 4rem;
 }
@@ -162,12 +165,10 @@ main {
 }
 
 .dice1 {
-  position: absolute;
   top: 12rem;
 }
 
 .dice2 {
-  position: absolute;
   top: 26rem;
 }
 
@@ -182,4 +183,115 @@ main {
 
 .hidden {
   display: none;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 48rem) {
+  /* 768px */
+  /* LAYOUT */
+  main {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .player {
+    padding: 2rem;
+  }
+
+  .player-1 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* ELEMENTS */
+  .name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .score {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .message {
+    position: absolute;
+    top: 29%;
+    margin: 1rem;
+  }
+
+  #message-1 {
+    top: 65%;
+  }
+
+  .current {
+    width: 40%;
+    padding: 1rem;
+  }
+
+  .current-label {
+    font-size: 1.4rem;
+  }
+
+  .current-score {
+    font-size: 2.4rem;
+  }
+
+  /* ABSOLUTE POSITIONED ELEMENTS */
+  .btn {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    min-width: 11rem;
+  }
+
+  .btn-new {
+    top: 3rem;
+    left: 16%;
+  }
+  .btn-roll {
+    left: 20%;
+  }
+  .btn-hold {
+    left: 80%;
+  }
+
+  .btn:active {
+    transform: translateY(-1rem);
+  }
+
+  .dice {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .dice1 {
+    top: 42%;
+  }
+
+  .dice2 {
+    top: 58%;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  /* 480px */
+  .current-score {
+    font-size: 1.8rem;
+  }
+
+  .short-text {
+    display: inline-block;
+  }
+  .long-text {
+    display: none;
+  }
+
+  .btn::first-letter {
+    font-size: 1.6rem;
+  }
+
+  .dice {
+    height: 7rem;
+  }
 }
